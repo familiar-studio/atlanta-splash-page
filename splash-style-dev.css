@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#splashContainer {
+  color: #32234a;
+}
+
+#splashContainer a:link {
+  text-decoration: none;
+  color: #32234a;
+  display: block;
+  max-width: 190px;
+  margin: 0 auto;
+}
+
+#splashContainer {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (orientation: landscape) and (max-height: 800px) {
+  #splashContainer {
+    height: auto;
+  }
+}
+
+#splashHeadline {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+@media (max-height: 800px) and (max-width: 400px) {
+  #splashHeadline {
+    padding-top: 0;
+    margin: -25px auto;
+  }
+}
+
+#splashHeadline svg {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+#splashHeadline svg #tagline > *:not(#line-1):not(#line-2):not(#line-4) > * {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#see.light #light { opacity: 1 !important; }
+#see.dark #dark { opacity: 1 !important; }
+#hear.light #light { opacity: 1 !important; }
+#hear.dark #dark { opacity: 1 !important; }
+#discuss.light #light { opacity: 1 !important; }
+#discuss.dark #dark { opacity: 1 !important; }
+#support.light #light { opacity: 1 !important; }
+#support.dark #dark { opacity: 1 !important; }
+#experience.light #light { opacity: 1 !important; }
+#experience.dark #dark { opacity: 1 !important; }
+
+
+#splashFreeAdmission {
+  text-align: center;
+  padding: 0 15px;
+  margin: 80px auto;
+}
+@media (max-height: 800px) {
+  #splashFreeAdmission {
+    margin: 0 auto;
+  }
+}
+
+#splashFreeAdmission span {
+  color: #db2272;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+
+#splashContinueBtn {
+  background-color: #db2272;
+  text-transform: uppercase;
+  padding: 10px;
+  color: #fdfdfd !important;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 1.71px;
+}
+@media (max-height: 800px) {
+  #splashContinueBtn {
+    margin: 15px auto !important;
+  }
+}
+
+.logo-contact-container {
+  width: 90vw;
+  max-width: 652px;
+  margin: 0 auto;
+}
+
+.logo-contact-container svg {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.splash-contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.splash-contact.mobile-sm {
+  flex-direction: column;
+  text-align: center;
+}
+
+.splash-contact > * {
+  margin: 0 5px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #32234a;
+}
+@media (max-height: 800px) {
+  .splash-contact > * {
+    font-size: 12px;
+  }
+}
+
+.circular-pro-book {
+  font-family: "Circular-Pro-Book";
+}
+
+.circular-pro-medium {
+  font-family: "Circular-Pro-Medium";
+}
+
+@font-face {
+  font-family: "Circular-Pro-Book";
+  src:url("css/lineto-circular-pro-book.eot");
+  src:url("css/lineto-circular-pro-book.eot?#iefix") format("embedded-opentype"),
+      url("css/lineto-circular-pro-book.woff") format("woff"),
+      url("css/lineto-circular-pro-book.ttf") format("truetype"),
+      url("css/lineto-circular-pro-book.svg#lineto-circular-pro-book") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular-Pro-Medium";
+  src:url("css/lineto-circular-pro-medium.eot");
+  src:url("css/lineto-circular-pro-medium.eot?#iefix") format("embedded-opentype"),
+      url("css/lineto-circular-pro-medium.woff") format("woff"),
+      url("css/lineto-circular-pro-medium.ttf") format("truetype"),
+      url("css/lineto-circular-pro-medium.svg#lineto-circular-pro-medium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#splashHeadline svg #animatedWord {
+  /*transform: perspective(80000px) rotate3d(1, 0, 0, 0deg);*/
+  transform: rotateX(0deg);
+  perspective-origin: 590px 200px;
+  transform-origin: center center;
+  transition: transform 0.4s ease-in-out;
+}
+
+#splashHeadline svg #animatedWord.out {
+  /*transform: perspective(80000px) rotate3d(1, 0, 0, 90deg);*/
+  transform: rotateX(90deg);
+}
+
+.splash-invis {
+  opacity: 0;
+}
